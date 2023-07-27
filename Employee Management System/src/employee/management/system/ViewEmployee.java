@@ -17,13 +17,20 @@ public class ViewEmployee extends JFrame implements ActionListener {
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
         
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/view.jpg"));
+        Image i2 =  i1.getImage().getScaledInstance(900, 700, Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2);
+        JLabel image = new JLabel(i3);
+        image.setBounds(0, 0, 900, 700);
+        add(image);
+        
         JLabel searchlbl = new JLabel("Search by Employee ID");
         searchlbl.setBounds(20, 20, 150, 20);
-        add(searchlbl);
+        image.add(searchlbl);
         
         cemployeeid = new Choice();
         cemployeeid.setBounds(180, 20, 150, 20);
-        add(cemployeeid);
+        image.add(cemployeeid);
         
         try {
            Connn c = new Connn();
@@ -49,27 +56,27 @@ public class ViewEmployee extends JFrame implements ActionListener {
        
        JScrollPane jsp = new JScrollPane(table);
        jsp.setBounds(0, 100, 900, 600);
-       add(jsp);
+       image.add(jsp);
        
        search = new JButton("Search");
        search.setBounds(20, 70, 80, 20);
        search.addActionListener(this);
-       add(search);
+       image.add(search);
        
        print = new JButton("Print");
        print.setBounds(120, 70, 80, 20);
        print.addActionListener(this);
-       add(print);
+       image.add(print);
        
        update = new JButton("Update");
        update.setBounds(220, 70, 80, 20);
        update.addActionListener(this);
-       add(update);
+       image.add(update);
        
        back = new JButton("Back");
        back.setBounds(320, 70, 80, 20);
        back.addActionListener(this);
-       add(back);
+       image.add(back);
         
        setSize(900, 700);
        setLocation(300, 100);

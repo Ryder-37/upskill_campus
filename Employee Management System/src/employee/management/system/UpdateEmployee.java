@@ -17,110 +17,117 @@ public class UpdateEmployee extends JFrame implements ActionListener {
         getContentPane().setBackground(Color.WHITE);
         setLayout (null);
         
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/details.jpg"));
+        Image i2 =  i1.getImage().getScaledInstance(900, 700, Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2);
+        JLabel image = new JLabel(i3);
+        image.setBounds(0, 0, 900, 700);
+        add(image);
+        
         JLabel heading = new JLabel("Update Employee Details");
         heading.setBounds(320, 30, 500, 50);
         heading.setFont(new Font("SAN_SERIF", Font.BOLD, 25));
-        add(heading);
+        image.add(heading);
         
         JLabel labelname = new JLabel("Name");
         labelname.setBounds(50, 150, 150, 30);
         labelname.setFont(new Font("SERIF", Font.PLAIN, 20));
-        add(labelname);
+        image.add(labelname);
         
         JLabel lblname = new JLabel();
         lblname.setBounds(200, 150 , 150, 30);
-        add(lblname);
+        image.add(lblname);
         
         JLabel labelfname = new JLabel("Father's Name");
         labelfname.setBounds(400, 150, 150, 30);
         labelfname.setFont(new Font("SERIF", Font.PLAIN, 20));
-        add(labelfname);
+        image.add(labelfname);
         
         tffname = new JTextField();
         tffname.setBounds(600, 150 , 150, 30);
-        add(tffname);
+        image.add(tffname);
         
         JLabel labeldob = new JLabel("Date of Birth");
         labeldob.setBounds(50, 200, 150, 30);
         labeldob.setFont(new Font("SERIF", Font.PLAIN, 20));
-        add(labeldob);
+        image.add(labeldob);
         
         JLabel lbldob = new JLabel();
         lbldob.setBounds(200, 200, 150, 30);
-        add(lbldob);
+        image.add(lbldob);
         
         JLabel labelsalary = new JLabel("Salary");
         labelsalary.setBounds(400, 200, 150, 30);
         labelsalary.setFont(new Font("SERIF", Font.PLAIN, 20));
-        add(labelsalary);
+        image.add(labelsalary);
         
         tfsalary = new JTextField();
         tfsalary.setBounds(600,200 , 150, 30);
-        add(tfsalary);
+        image.add(tfsalary);
         
         JLabel labeladdress = new JLabel("Address ");
         labeladdress.setBounds(50, 250, 150, 30);
         labeladdress.setFont(new Font("SERIF", Font.PLAIN, 20));
-        add(labeladdress);
+        image.add(labeladdress);
         
         tfaddress = new JTextField();
         tfaddress.setBounds(200,250 , 150, 30);
-        add(tfaddress);
+        image.add(tfaddress);
         
         JLabel labelphone = new JLabel("Phone ");
         labelphone.setBounds(400, 250, 150, 30);
         labelphone.setFont(new Font("SERIF", Font.PLAIN, 20));
-        add(labelphone);
+        image.add(labelphone);
         
         tfphone = new JTextField();
         tfphone.setBounds(600,250 , 150, 30);
-        add(tfphone);
+        image.add(tfphone);
         
         JLabel labelemail = new JLabel("Email ");
         labelemail.setBounds(50, 300, 150, 30);
         labelemail.setFont(new Font("SERIF", Font.PLAIN, 20));
-        add(labelemail);
+        image.add(labelemail);
         
         tfemail = new JTextField();
         tfemail.setBounds(200,300 , 150, 30);
-        add(tfemail);
+        image.add(tfemail);
         
         JLabel labeleducation = new JLabel("Higest Education ");
         labeleducation.setBounds(400, 300, 150, 30);
         labeleducation.setFont(new Font("SERIF", Font.PLAIN, 20));
-        add(labeleducation);
+        image.add(labeleducation);
         
         tfeducation = new JTextField();
         tfeducation.setBounds(600,300 , 150, 30);
-        add(tfeducation);
+        image.add(tfeducation);
         
         JLabel labeldesignation = new JLabel("Designation ");
         labeldesignation.setBounds(50, 350, 150, 30);
         labeldesignation.setFont(new Font("SERIF", Font.PLAIN, 20));
-        add(labeldesignation);
+        image.add(labeldesignation);
         
         tfdesignation = new JTextField();
         tfdesignation.setBounds(200,350 , 150, 30);
-        add(tfdesignation);
+        image.add(tfdesignation);
         
         JLabel labelaadhar = new JLabel("Aadhar Number ");
         labelaadhar.setBounds(400, 350, 150, 30);
         labelaadhar.setFont(new Font("SERIF", Font.PLAIN, 20));
-        add(labelaadhar);
+        image.add(labelaadhar);
         
         JLabel lblaadhar = new JLabel();
         lblaadhar.setBounds(600,350 , 150, 30);
-        add(lblaadhar);
+        image.add(lblaadhar);
         
         JLabel labelempid = new JLabel("Employee ID");
         labelempid.setBounds(50, 400, 150, 30);
         labelempid.setFont(new Font("SERIF", Font.PLAIN, 20));
-        add(labelempid);
+        image.add(labelempid);
         
         lblempid = new JLabel();
         lblempid.setBounds(200, 400, 150, 30);
         lblempid.setFont(new Font("SERIF", Font.PLAIN, 20));
-        add(lblempid);
+        image.add(lblempid);
         
         try {
             Connn c = new Connn();
@@ -148,14 +155,14 @@ public class UpdateEmployee extends JFrame implements ActionListener {
         add.addActionListener(this);
         add.setBackground(Color.BLACK);
         add.setForeground(Color.WHITE);
-        add(add);
+        image.add(add);
         
         back = new JButton("Back");
         back.setBounds(450,550, 150, 40);
         back.addActionListener(this);
         back.setBackground(Color.BLACK);
         back.setForeground(Color.WHITE);
-        add(back);
+        image.add(back);
         
         setSize(900, 700);
         setLocation(300, 100);
